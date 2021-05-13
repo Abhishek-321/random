@@ -3,8 +3,8 @@ const CronJob = require('cron').CronJob;
 const nodemailer = require('nodemailer'); 
 const express = require('express'); 
 const app = express(); 
-const port = process.env.PORT; 
-app.listen(port, ()=>{}); 
+const port = process.env.PORT || 3000; 
+app.listen(port, ()=>{console.log("server at port")}); 
 
 app.use(express.static('public')); //sending public directory
 app.use(express.json());  //parsing the information
